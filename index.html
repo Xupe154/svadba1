@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Свадьба Георгия и Ангелины</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="decor decor-top-left"></div>
+  <div class="decor decor-top-right"></div>
+  <div class="decor decor-bottom-left"></div>
+  <div class="decor decor-bottom-right"></div>
+  <div class="container">
+    <header>
+      <h1>Свадьба Георгия и Ангелины</h1>
+      <p class="date">01.08.2025, Калязин, усадьба Гостевой дом</p>
+    </header>
+    <div class="full-photo-block">
+      <img src="photo1.jpg" alt="Фото 1" class="full-photo">
+    </div>
+    <div class="intro-block">
+      <p>Дорогие друзья и близкие!<br>
+      Мы рады пригласить вас на самый важный день в нашей жизни — нашу свадьбу! Вместе мы прошли много удивительных моментов, и теперь хотим разделить этот праздник с вами.<br>
+      Пусть этот день будет наполнен радостью, улыбками и теплом ваших сердец. Мы очень ценим вашу поддержку и дружбу!</p>
+    </div>
+    <div class="photo-block">
+      <img src="wedding-photo.jpg" alt="Георгий и Ангелина" class="wedding-photo">
+    </div>
+    <div class="details-block">
+      <h2>Детали:</h2>
+      <p><b>Подарки:</b> Для нас главное внимание, а пожелание в конверте будут приятным бонусом.</p>
+      <p><b>Цветы:</b> Уважаемые гости, не дарите нам цветы, мы еще успеем насладиться их красотой после свадьбы.</p>
+    </div>
+    <form class="rsvp-form">
+      <h2>Анкета гостя</h2>
+      <label>
+        Ваше имя:<br>
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        Сможете ли вы быть на свадьбе?<br>
+        <select name="attendance" required>
+          <option value="">Выберите вариант</option>
+          <option value="yes">Да, буду!</option>
+          <option value="no">К сожалению, не смогу</option>
+        </select>
+      </label>
+      <label>
+        Потребуется ли вам трансфер из Кашина до Калязина?<br>
+        <select name="transfer" required>
+          <option value="">Выберите вариант</option>
+          <option value="yes">Да</option>
+          <option value="no">Нет</option>
+        </select>
+      </label>
+      <label>
+        Ваш любимый трек:<br>
+        <input type="text" name="track" placeholder="Название исполнителя и трека">
+      </label>
+      <label>
+        Какой напиток вы предпочитаете?<br>
+        <select name="drink" required>
+          <option value="">Выберите напиток</option>
+          <option value="white_wine">Вино белое полусухое</option>
+          <option value="samogon">Самогонка</option>
+          <option value="vodka">Водка</option>
+        </select>
+      </label>
+      <button type="submit">Отправить</button>
+    </form>
+    <div class="outro-block">
+      <p>Спасибо, что разделяете с нами этот особенный день! Мы с нетерпением ждем встречи и уверены, что вместе создадим незабываемые воспоминания.<br>
+      С любовью, Георгий и Ангелина</p>
+    </div>
+    <div class="full-photo-block">
+      <img src="photo2.jpg" alt="Фото 2" class="full-photo">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html> 

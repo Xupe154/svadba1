@@ -1,0 +1,251 @@
+body {
+  background: linear-gradient(120deg, #f8ede3 0%, #e2c799 100%);
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  color: #3e2723;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed;
+  z-index: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(270deg, #f8ede3, #e2c799, #f7b267, #a7c7e7, #f8ede3);
+  background-size: 400% 400%;
+  animation: gradientMove 18s ease-in-out infinite;
+  opacity: 0.55;
+  pointer-events: none;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.container {
+  max-width: 540px;
+  margin: 40px auto;
+  background: #fff8f0ee;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px #c9b18b55;
+  padding: 36px 28px 20px 28px;
+  border: 3px solid #e2c799;
+  position: relative;
+  z-index: 1;
+}
+header h1 {
+  font-family: 'Great Vibes', cursive, 'Montserrat', 'Roboto', Arial, sans-serif;
+  font-size: 2.7em;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #a67c52;
+  text-shadow: 0 2px 8px #fff8f0, 0 1px 0 #e2c799;
+  margin-bottom: 0.2em;
+}
+.date {
+  text-align: center;
+  color: #d4a373;
+  margin-bottom: 1.5em;
+  font-size: 1.15em;
+  font-weight: 500;
+}
+.photo-block {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+.wedding-photo {
+  width: 220px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px #a67c5244;
+  border: 3px solid #e2c799;
+}
+.full-photo-block {
+  width: 100%;
+  margin: 32px 0 32px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.full-photo {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px #a67c5244, 0 0 0 8px #fff8f0cc;
+  border: 4px solid #e2c799;
+  object-fit: cover;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.full-photo:hover {
+  box-shadow: 0 12px 48px #a67c5277, 0 0 0 12px #ffe5b4cc;
+  border-color: #d4a373;
+}
+.intro-block, .outro-block, .details-block {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: linear-gradient(100deg, #fff8f0 60%, #ffe5b4 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #e2c79933;
+  padding: 22px 18px 16px 18px;
+  margin-bottom: 2em;
+  border: 2px dashed #e2c799;
+  position: relative;
+  overflow: hidden;
+}
+.intro-block::before, .outro-block::before, .details-block::before {
+  content: '';
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 80px; height: 80px;
+  background: url('https://pngimg.com/uploads/flower/flower_PNG102.png') no-repeat center/contain;
+  opacity: 0.13;
+  pointer-events: none;
+}
+.intro-block {
+  margin-top: 1.2em;
+}
+.outro-block {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+.intro-block p, .outro-block p {
+  color: #5d4037;
+  font-size: 1.13em;
+  line-height: 1.7;
+  margin: 0;
+}
+.details-block h2 {
+  color: #a67c52;
+  margin-top: 0;
+  margin-bottom: 0.7em;
+  font-size: 1.3em;
+  text-align: left;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+}
+.details-block p {
+  color: #5d4037;
+  margin: 0.3em 0 0.7em 0;
+  font-size: 1.08em;
+  line-height: 1.6;
+}
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+  background: linear-gradient(100deg, #fff8f0 60%, #ffe5b4 100%);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #e2c79933;
+  border: 2px dashed #e2c799;
+  padding: 20px 16px 14px 16px;
+  margin-bottom: 2em;
+  position: relative;
+  overflow: hidden;
+}
+.rsvp-form::before {
+  content: '';
+  position: absolute;
+  bottom: -30px; left: -30px;
+  width: 80px; height: 80px;
+  background: url('https://pngimg.com/uploads/flower/flower_PNG102.png') no-repeat center/contain;
+  opacity: 0.13;
+  pointer-events: none;
+}
+.rsvp-form h2 {
+  text-align: center;
+  color: #a67c52;
+  margin-bottom: 0.5em;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+}
+.rsvp-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.08em;
+  color: #5d4037;
+}
+.rsvp-form input, .rsvp-form select {
+  margin-top: 0.3em;
+  padding: 0.5em;
+  border-radius: 7px;
+  border: 1.5px solid #e2c799;
+  background: #f8ede3;
+  font-size: 1em;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.rsvp-form input:focus, .rsvp-form select:focus {
+  border-color: #d4a373;
+  box-shadow: 0 0 0 2px #ffe5b4aa;
+  outline: none;
+}
+.rsvp-form button {
+  margin-top: 1em;
+  padding: 0.7em;
+  background: linear-gradient(90deg, #a67c52 0%, #e2c799 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #e2c79955;
+}
+.rsvp-form button:hover {
+  background: linear-gradient(90deg, #7c4f1d 0%, #a67c52 100%);
+  box-shadow: 0 4px 16px #e2c79977;
+}
+footer {
+  text-align: center;
+  margin-top: 2em;
+  color: #a67c52;
+  font-size: 1.1em;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 8px 2vw 8px 2vw;
+  }
+  .full-photo {
+    max-width: 100vw;
+    border-radius: 12px;
+  }
+  .intro-block, .outro-block, .details-block, .rsvp-form {
+    padding: 12px 6px 10px 6px;
+    border-radius: 10px;
+  }
+}
+.decor {
+  position: fixed;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0.22;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.decor-top-left {
+  top: 0; left: 0;
+  width: 120px; height: 120px;
+  background-image: url('https://pngimg.com/uploads/flower/flower_PNG102.png');
+}
+.decor-top-right {
+  top: 0; right: 0;
+  width: 110px; height: 110px;
+  background-image: url('https://pngimg.com/uploads/flower/flower_PNG107.png');
+}
+.decor-bottom-left {
+  bottom: 0; left: 0;
+  width: 100px; height: 100px;
+  background-image: url('https://pngimg.com/uploads/flower/flower_PNG109.png');
+}
+.decor-bottom-right {
+  bottom: 0; right: 0;
+  width: 130px; height: 130px;
+  background-image: url('https://pngimg.com/uploads/flower/flower_PNG110.png');
+}
+@media (max-width: 600px) {
+  .decor-top-left, .decor-top-right, .decor-bottom-left, .decor-bottom-right {
+    width: 60px; height: 60px;
+  }
+} 
